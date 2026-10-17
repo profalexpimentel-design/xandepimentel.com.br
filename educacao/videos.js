@@ -1,6 +1,14 @@
 // Galeria de questões resolvidas. Atualize título, assunto e prova quando confirmados.
 window.QUESTOES_VIDEOS = [
   {
+    titulo: "Questão Resolvida — ENEM",
+    categoria: "ENEM",
+    assunto: "",
+    prova: "ENEM",
+    data: "2026-10-16",
+    youtubeId: "IlP7fXAz72U"
+  },
+  {
     titulo: "Questão Resolvida — CESGRANRIO",
     categoria: "Concursos",
     assunto: "",
