@@ -2,7 +2,7 @@
 body{background:#f4efe6;color:#151515}
 .header{position:relative;background:#000}
 .header .container{width:92%;max-width:1700px}
-.questions-hero{min-height:350px;display:flex;align-items:center;color:#fff;background:linear-gradient(105deg,rgba(0,0,0,.93),rgba(0,0,0,.68)),url('../images/cronica.png') center/cover}
+.questions-hero{min-height:350px;display:flex;align-items:center;color:#fff;background:linear-gradient(105deg,rgba(0,0,0,.93),rgba(0,0,0,.68)),url('../images/Xande_Podcast.jpg') center 40%/cover}
 .questions-hero-inner{width:min(1120px,90%);margin:auto;padding:60px 0}
 .eyebrow,.video-tag{font-size:13px;letter-spacing:3px;color:#d8a128;font-weight:600}
 .questions-hero h1{font:500 clamp(48px,6vw,80px)/1.03 'Cormorant Garamond',serif;margin:24px 0 16px}
