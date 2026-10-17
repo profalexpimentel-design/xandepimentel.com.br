@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Questões Resolvidas | Prof. Xande Pimentel</title>
+<meta name="description" content="Galeria de questões de matemática resolvidas pelo Prof. Xande para ENEM, concursos, vestibulares e Colégio Militar.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container"><div class="logo-area"><a href="../index.html" aria-label="Página inicial"><img src="../images/logo.png" class="logo" alt="Logo Xande Pimentel"></a><div class="brand"><h2>Xande Pimentel</h2><span>EDUCAÇÃO. FÉ. PROPÓSITO.</span></div></div><nav aria-label="Menu principal"><ul><li><a class="active" href="index.html">EDUCAÇÃO</a></li><li><a href="../cronicas/index.html">FÉ</a></li><li><a href="../index.html">PROPÓSITO</a></li><li><a href="../cronicas/index.html">CRÔNICAS</a></li><li><a href="../index.html">SOBRE</a></li><li><a href="../index.html">CONTATO</a></li></ul></nav></div></header>
+<section class="questions-hero"><div class="questions-hero-inner"><span class="eyebrow">EDUCAÇÃO · PROF. XANDE PIMENTEL</span><h1>Questões<br>Resolvidas.</h1><p>Matemática na prática, com explicações claras, estratégias de resolução e preparação para suas próximas conquistas.</p></div></section>
+<main class="questions-main">
+<section class="intro"><span class="eyebrow">ESCOLHA SUA PREPARAÇÃO</span><h2>Aprenda resolvendo.</h2><p>Explore os vídeos por tipo de prova e encontre a resolução que procura.</p></section>
+<div class="filters" role="group" aria-label="Filtrar questões por prova"><button class="selected" type="button" data-filter="Todas" aria-pressed="true">TODAS</button><button type="button" data-filter="ENEM" aria-pressed="false">ENEM</button><button type="button" data-filter="Concursos" aria-pressed="false">CONCURSOS</button><button type="button" data-filter="Vestibulares" aria-pressed="false">VESTIBULARES</button><button type="button" data-filter="Colégio Militar" aria-pressed="false">COLÉGIO MILITAR</button></div>
+<label class="search-label" for="search">BUSCAR QUESTÃO</label><input type="search" id="search" placeholder="Busque por assunto, prova ou palavra-chave..." autocomplete="off">
+<section class="video-grid" id="video-grid" aria-label="Vídeos de questões resolvidas"></section>
+<div class="empty" id="empty"><span class="empty-icon" aria-hidden="true">▶</span><h3>Em breve, novas resoluções por aqui.</h3><p>Estamos preparando a galeria de questões resolvidas. Volte em breve para acompanhar as videoaulas do Prof. Xande.</p></div>
+</main>
+<footer class="questions-footer"><p>PROF. XANDE PIMENTEL · EDUCAÇÃO. FÉ. PROPÓSITO.</p><a href="../index.html">← VOLTAR AO PORTAL</a></footer>
+<script src="videos.js"></script>
+<script>
+(function(){
+const buttons=[...document.querySelectorAll('[data-filter]')],search=document.getElementById('search'),grid=document.getElementById('video-grid'),empty=document.getElementById('empty');
+let filter='Todas';
+function render(){
+const videos=(window.QUESTOES_VIDEOS||[]).filter(v=>(filter==='Todas'||v.categoria===filter)&&[v.titulo,v.assunto,v.prova,v.categoria].join(' ').toLocaleLowerCase('pt-BR').includes(search.value.trim().toLocaleLowerCase('pt-BR'))).sort((a,b)=>String(b.data||'').localeCompare(String(a.data||'')));
+grid.replaceChildren();
+for(const v of videos){
+if(!/^[\w-]{11}$/.test(v.youtubeId||''))continue;
+const article=document.createElement('article');article.className='video-card';
+const a=document.createElement('a');a.className='video-thumb';a.href='https://www.youtube.com/watch?v='+v.youtubeId;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label','Assistir '+v.titulo+' no YouTube');
+const img=document.createElement('img');img.src='https://img.youtube.com/vi/'+v.youtubeId+'/hqdefault.jpg';img.alt='Miniatura do vídeo: '+v.titulo;img.loading='lazy';a.append(img);
+const play=document.createElement('span');play.className='play';play.textContent='▶';play.setAttribute('aria-hidden','true');a.append(play);
+const body=document.createElement('div');body.className='video-body';
+const tag=document.createElement('span');tag.className='video-tag';tag.textContent=v.categoria;body.append(tag);
+const title=document.createElement('h3');title.textContent=v.titulo;body.append(title);
+const sub=document.createElement('p');sub.textContent=[v.assunto,v.prova].filter(Boolean).join(' · ');body.append(sub);
+const link=document.createElement('a');link.href=a.href;link.target='_blank';link.rel='noopener noreferrer';link.className='watch';link.textContent='ASSISTIR RESOLUÇÃO →';body.append(link);
+article.append(a,body);grid.append(article);
+}
+empty.hidden=grid.children.length>0;
+empty.querySelector('h3').textContent=(window.QUESTOES_VIDEOS||[]).length?'Nenhuma questão encontrada.':'Em breve, novas resoluções por aqui.';
+empty.querySelector('p').textContent=(window.QUESTOES_VIDEOS||[]).length?'Tente outra categoria ou termo de busca.':'Estamos preparando a galeria de questões resolvidas. Volte em breve para acompanhar as videoaulas do Prof. Xande.';
+}
+buttons.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;buttons.forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',String(x===b));});render();}));search.addEventListener('input',render);render();
+})();
+</script>
+</body></html>
