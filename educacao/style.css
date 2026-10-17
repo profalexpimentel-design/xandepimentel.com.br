@@ -1,0 +1,37 @@
+/* Mesma identidade visual da Biblioteca de Crônicas */
+body{background:#f4efe6;color:#151515}
+.header{position:relative;background:#000}
+.header .container{width:92%;max-width:1700px}
+.questions-hero{min-height:350px;display:flex;align-items:center;color:#fff;background:linear-gradient(105deg,rgba(0,0,0,.93),rgba(0,0,0,.68)),url('../images/Xande_Podcast.jpg') center 40%/cover}
+.questions-hero-inner{width:min(1120px,90%);margin:auto;padding:60px 0}
+.eyebrow,.video-tag{font-size:13px;letter-spacing:3px;color:#d8a128;font-weight:600}
+.questions-hero h1{font:500 clamp(48px,6vw,80px)/1.03 'Cormorant Garamond',serif;margin:24px 0 16px}
+.questions-hero p{max-width:520px;line-height:1.8;font-size:16px}
+.questions-main{width:min(1120px,90%);margin:42px auto 70px}
+.intro h2{font:500 42px 'Cormorant Garamond',serif;margin:12px 0 8px;color:#151515}
+.intro p{font:14px/1.8 Montserrat,sans-serif;color:#666}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 20px}
+.filters button{background:none;border:1px solid transparent;border-radius:30px;padding:10px 15px;cursor:pointer;font:600 12px Montserrat,sans-serif;letter-spacing:1px;color:#666}
+.filters button:hover,.filters button.selected{border-color:#d8a128;color:#986400}
+.search-label{display:block;font:600 11px Montserrat,sans-serif;letter-spacing:1px;color:#986400;margin-bottom:8px}
+#search{padding:12px 16px;border:1px solid #ddd;border-radius:30px;background:transparent;font:13px Montserrat,sans-serif;max-width:100%;width:340px}
+#search:focus{outline:2px solid #d8a128;outline-offset:2px}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px}
+.video-card{background:#fff;border:1px solid #e7e3dc;border-radius:9px;overflow:hidden}
+.video-thumb{display:block;position:relative;aspect-ratio:16/9;background:#403a30}
+.video-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#d8a128;color:#111;padding:12px 18px;border-radius:50%;font-size:18px}
+.video-body{padding:22px}
+.video-tag{font-size:11px;letter-spacing:1px;color:#9c6819}
+.video-body h3{font:500 30px 'Cormorant Garamond',serif;margin:12px 0;color:#111}
+.video-body p{font:14px/1.8 Montserrat,sans-serif;color:#666}
+.watch{display:inline-block;margin-top:16px;color:#9c6819;font:600 12px Montserrat,sans-serif;letter-spacing:1px;text-decoration:none}
+.empty{margin-top:28px;padding:60px 24px;border:1px solid #e7e3dc;border-radius:9px;text-align:center;background:#fff}
+.empty[hidden]{display:none}
+.empty-icon{display:block;color:#d8a128;font-size:36px}
+.empty h3{font:500 34px 'Cormorant Garamond',serif;margin:16px 0;color:#111}
+.empty p{font:14px/1.8 Montserrat,sans-serif;color:#666;max-width:560px;margin:auto}
+.questions-footer{background:#080a0b;color:#fff;padding:35px 5%;display:flex;align-items:center;justify-content:space-between;gap:30px;font-size:13px}
+.questions-footer a{color:#d8a128;text-decoration:none}
+@media(max-width:850px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.header nav{display:block}.header nav ul{flex-wrap:wrap;gap:12px}.header nav a{font-size:11px}.header nav a.active:after{display:none}}
+@media(max-width:600px){.video-grid{grid-template-columns:1fr}.questions-footer{flex-direction:column;align-items:stretch}.questions-hero{min-height:310px}.questions-hero h1{font-size:53px}.header .container{flex-wrap:wrap;gap:16px}.header .logo{width:65px}.header .brand h2{font-size:30px}.header .brand span{font-size:9px;letter-spacing:2px}}
