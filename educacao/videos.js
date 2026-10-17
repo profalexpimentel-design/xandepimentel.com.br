@@ -1,6 +1,14 @@
 // Galeria de questões resolvidas. Atualize título, assunto e prova quando confirmados.
 window.QUESTOES_VIDEOS = [
   {
+    titulo: "Questão Resolvida — CESGRANRIO",
+    categoria: "Concursos",
+    assunto: "",
+    prova: "CESGRANRIO",
+    data: "2026-10-16",
+    youtubeId: "UeauIbdjET0"
+  },
+  {
     titulo: "Questão Resolvida — Juros Simples",
     categoria: "Concursos",
     assunto: "Juros simples",
