@@ -1,6 +1,14 @@
 // Galeria de questões resolvidas. Atualize título, assunto e prova quando confirmados.
 window.QUESTOES_VIDEOS = [
   {
+    titulo: "Questão Resolvida — Colégio Militar",
+    categoria: "Colégio Militar",
+    assunto: "Prova do Colégio Militar",
+    prova: "Colégio Militar",
+    data: "2026-10-20",
+    youtubeId: "WFGMqMZMGNc"
+  },
+  {
     titulo: "Questão Resolvida — ENEM",
     categoria: "ENEM",
     assunto: "",
