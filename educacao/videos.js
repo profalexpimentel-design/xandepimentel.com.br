@@ -1,6 +1,14 @@
 // Galeria de questões resolvidas. Atualize título, assunto e prova quando confirmados.
 window.QUESTOES_VIDEOS = [
   {
+    titulo: "Questão Resolvida — Vestibulares",
+    categoria: "Vestibulares",
+    assunto: "",
+    prova: "",
+    data: "2026-10-28",
+    youtubeId: "J_x7QdgTM8Y"
+  },
+  {
     titulo: "Questão Resolvida — Colégio Militar",
     categoria: "Colégio Militar",
     assunto: "Prova do Colégio Militar",
