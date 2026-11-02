@@ -5,6 +5,14 @@ window.QUESTOES_VIDEOS = [
     categoria: "Vestibulares",
     assunto: "",
     prova: "",
+    data: "2026-11-02",
+    youtubeId: "UcrLwVCO3y0"
+  },
+  {
+    titulo: "Questão Resolvida — Vestibulares",
+    categoria: "Vestibulares",
+    assunto: "",
+    prova: "",
     data: "2026-10-29",
     youtubeId: "r3j4G6s3pws"
   },
